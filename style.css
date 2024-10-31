@@ -112,8 +112,8 @@ footer p {
     }
 
     .featured-image {
-        width: 90%; /* Lebar gambar 90% untuk tampilan portrait */
-        max-width: 500px; /* Lebar maksimum untuk gambar */
+        width: 90%; /* Gambar menyesuaikan dengan 90% lebar layar */
+        max-width: 500px; /* Lebar maksimum gambar */
     }
 
     section h2 {
@@ -124,7 +124,7 @@ footer p {
 /* Responsif untuk perangkat besar (landscape) */
 @media (min-width: 769px) {
     .featured-image {
-        width: 50%; /* Lebar gambar 50% untuk tampilan landscape */
+        width: 50%; /* Gambar 50% lebar layar untuk tampilan landscape */
         max-width: 300px; /* Lebar maksimum untuk gambar */
     }
 }
