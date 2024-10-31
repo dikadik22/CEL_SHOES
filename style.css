@@ -97,18 +97,11 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responsif untuk perangkat kecil */
-/* Gaya untuk gambar galeri agar sesuai layar portrait */
-@media (orientation: portrait) {
-    .featured-image {
-        width: 90%; /* Menyelaraskan gambar dengan layar portrait */
-        max-width: 500px; /* Menentukan lebar maksimum */
-        height: auto; /* Menjaga proporsi gambar */
-        margin-left: auto;
-        margin-right: auto;
+/* Responsif untuk perangkat kecil (portrait) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
     }
-}
-
 
     nav ul {
         flex-direction: column;
@@ -116,5 +109,22 @@ footer p {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    .featured-image {
+        width: 90%; /* Lebar gambar 90% untuk tampilan portrait */
+        max-width: 500px; /* Lebar maksimum untuk gambar */
+    }
+
+    section h2 {
+        font-size: 1.8em; /* Ukuran font untuk judul di perangkat kecil */
+    }
+}
+
+/* Responsif untuk perangkat besar (landscape) */
+@media (min-width: 769px) {
+    .featured-image {
+        width: 50%; /* Lebar gambar 50% untuk tampilan landscape */
+        max-width: 300px; /* Lebar maksimum untuk gambar */
     }
 }
