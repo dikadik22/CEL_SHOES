@@ -52,8 +52,7 @@ main {
 }
 
 .featured-image {
-    width: 50%; 
-    max-width: 300px;
+    width: 90%; /* Gambar akan mengambil 90% lebar layar */
     height: auto; 
     display: block;
     margin-left: auto;
@@ -97,7 +96,7 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responsif untuk perangkat kecil */
+/* Responsif untuk perangkat kecil (portrait) */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -109,5 +108,13 @@ footer p {
 
     nav ul li {
         margin: 10px 0;
+    }
+}
+
+/* Responsif untuk perangkat besar (landscape) */
+@media (min-width: 769px) {
+    .featured-image {
+        width: 50%; /* Gambar 50% lebar layar untuk tampilan landscape */
+        max-width: 300px; /* Lebar maksimum untuk gambar */
     }
 }
