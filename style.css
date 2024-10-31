@@ -98,10 +98,17 @@ footer p {
 }
 
 /* Responsif untuk perangkat kecil */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+/* Gaya untuk gambar galeri agar sesuai layar portrait */
+@media (orientation: portrait) {
+    .featured-image {
+        width: 90%; /* Menyelaraskan gambar dengan layar portrait */
+        max-width: 500px; /* Menentukan lebar maksimum */
+        height: auto; /* Menjaga proporsi gambar */
+        margin-left: auto;
+        margin-right: auto;
     }
+}
+
 
     nav ul {
         flex-direction: column;
