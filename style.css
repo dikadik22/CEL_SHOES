@@ -12,6 +12,17 @@ body {
     color: #333;
 }
 
+/* Mengatur tampilan full-screen untuk setiap section */
+.page {
+    height: 100vh; /* Memastikan setiap section mengisi tinggi layar penuh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Mengatur konten agar berada di tengah */
+    align-items: center;
+    padding: 20px;
+    transition: opacity 0.5s ease; /* Animasi saat berpindah halaman */
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -46,54 +57,15 @@ nav ul li a:hover {
 
 /* Gaya untuk halaman utama */
 main {
-    padding: 0; /* Hapus padding untuk mendapatkan tampilan penuh */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.page {
-    height: 100vh; /* Setiap section akan mengambil tinggi satu layar penuh */
-    display: flex; /* Gunakan flexbox untuk memusatkan konten */
-    flex-direction: column;
-    justify-content: center; /* Pusatkan konten secara vertikal */
-    align-items: center; /* Pusatkan konten secara horizontal */
-}
-
+/* Gaya untuk gambar */
 .featured-image {
-    width: 100%; /* Setel lebar gambar sesuai dengan lebar layar */
-    max-width: 600px; /* Atur lebar maksimum gambar */
-    height: auto; /* Atur tinggi otomatis untuk menjaga proporsi */
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-section p {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* Gaya untuk daftar kontak */
-#kontak ul {
-    list-style-type: none;
-}
-
-#kontak ul li {
-    margin-bottom: 10px;
-}
-
-/* Gaya untuk footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 0.9em;
+    width: 80%; /* Ukuran gambar lebih kecil */
+    max-width: 300px;
+    height: auto; 
 }
 
 /* Responsif untuk perangkat kecil */
@@ -109,4 +81,17 @@ footer p {
     nav ul li {
         margin: 10px 0;
     }
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9em;
 }
