@@ -1,3 +1,4 @@
+/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
@@ -6,36 +7,107 @@
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
 nav ul {
-    list-style: none;
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.page {
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+/* Gaya untuk halaman utama */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section.page {
     display: none;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.page.active {
+section.page.active {
     display: block;
 }
 
-h2 {
+section h2 {
+    font-size: 2em;
     margin-bottom: 10px;
+    color: #333;
+}
+
+section p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Gaya untuk daftar kontak */
+#kontak ul {
+    list-style-type: none;
+}
+
+#kontak ul li {
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
