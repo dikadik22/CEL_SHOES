@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Website Sederhana</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+                <li><a href="#" onclick="showPage('profil')">Profil</a></li>
+                <li><a href="#" onclick="showPage('layanan')">Layanan</a></li>
+                <li><a href="#" onclick="showPage('galeri')">Galeri</a></li>
+                <li><a href="#" onclick="showPage('kontak')">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="beranda" class="page active">
+            <h2>Beranda</h2>
+            <p>Selamat datang di situs web kami!</p>
+        </section>
+        
+        <section id="profil" class="page">
+            <h2>Profil</h2>
+            <p>Ini adalah halaman profil kami.</p>
+        </section>
+        
+        <section id="layanan" class="page">
+            <h2>Layanan</h2>
+            <p>Kami menyediakan berbagai layanan untuk Anda.</p>
+        </section>
+        
+        <section id="galeri" class="page">
+            <h2>Galeri</h2>
+            <p>Berikut adalah beberapa foto dan gambar dari galeri kami.</p>
+        </section>
+        
+        <section id="kontak" class="page">
+            <h2>Kontak</h2>
+            <p>Hubungi kami melalui kontak berikut.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
