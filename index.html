@@ -5,9 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEL_SHOES</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            max-width: 100px; /* Atur ukuran maksimal logo */
+            height: auto;     /* Agar proporsional */
+            display: block;   /* Agar tidak ada masalah dengan layout */
+            margin: 0 auto;   /* Memusatkan logo jika dibutuhkan */
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+
+        /* Gaya untuk halaman utama */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section.page.active {
+            display: block;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        section p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Gaya untuk footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img src="path/to/logo.png" alt="Logo CEL_SHOES" class="logo"> <!-- Ganti dengan path yang sesuai -->
         <h1>CEL_SHOES</h1>
         <nav>
             <ul>
@@ -64,6 +169,14 @@
         <p>&copy; 2024 CEL_SHOES. Semua Hak Cipta Dilindungi.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            const activePage = document.getElementById(pageId);
+            activePage.classList.add('active');
+        }
+    </script>
 </body>
 </html>
