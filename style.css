@@ -20,7 +20,14 @@ body {
     justify-content: center; /* Mengatur konten agar berada di tengah */
     align-items: center;
     padding: 20px;
+    position: absolute; /* Menggunakan absolute untuk menempatkan section */
+    width: 100%;
+    opacity: 0; /* Menyembunyikan section */
     transition: opacity 0.5s ease; /* Animasi saat berpindah halaman */
+}
+
+.page.active {
+    opacity: 1; /* Menampilkan section aktif */
 }
 
 header {
@@ -28,6 +35,8 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: relative; /* Pastikan header tetap di atas */
+    z-index: 10; /* Memastikan header tetap di atas */
 }
 
 header h1 {
@@ -53,12 +62,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffa500;
-}
-
-/* Gaya untuk halaman utama */
-main {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 /* Gaya untuk gambar */
