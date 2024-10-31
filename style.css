@@ -97,7 +97,7 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responsif untuk perangkat kecil (portrait) */
+/* Responsif untuk perangkat kecil */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -109,22 +109,5 @@ footer p {
 
     nav ul li {
         margin: 10px 0;
-    }
-
-    .featured-image {
-        width: 90%; /* Gambar menyesuaikan dengan 90% lebar layar */
-        max-width: 500px; /* Lebar maksimum gambar */
-    }
-
-    section h2 {
-        font-size: 1.8em; /* Ukuran font untuk judul di perangkat kecil */
-    }
-}
-
-/* Responsif untuk perangkat besar (landscape) */
-@media (min-width: 769px) {
-    .featured-image {
-        width: 50%; /* Gambar 50% lebar layar untuk tampilan landscape */
-        max-width: 300px; /* Lebar maksimum untuk gambar */
     }
 }
