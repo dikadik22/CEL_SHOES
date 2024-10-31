@@ -46,21 +46,21 @@ nav ul li a:hover {
 
 /* Gaya untuk halaman utama */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 0; /* Hapus padding untuk mendapatkan tampilan penuh */
+}
+
+.page {
+    height: 100vh; /* Setiap section akan mengambil tinggi satu layar penuh */
+    display: flex; /* Gunakan flexbox untuk memusatkan konten */
+    flex-direction: column;
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
 }
 
 .featured-image {
-    width: 90%; /* Gambar akan mengambil 90% lebar layar */
-    height: auto; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section.page.active {
-    display: block;
+    width: 100%; /* Setel lebar gambar sesuai dengan lebar layar */
+    max-width: 600px; /* Atur lebar maksimum gambar */
+    height: auto; /* Atur tinggi otomatis untuk menjaga proporsi */
 }
 
 section h2 {
@@ -96,7 +96,7 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responsif untuk perangkat kecil (portrait) */
+/* Responsif untuk perangkat kecil */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -108,13 +108,5 @@ footer p {
 
     nav ul li {
         margin: 10px 0;
-    }
-}
-
-/* Responsif untuk perangkat besar (landscape) */
-@media (min-width: 769px) {
-    .featured-image {
-        width: 50%; /* Gambar 50% lebar layar untuk tampilan landscape */
-        max-width: 300px; /* Lebar maksimum untuk gambar */
     }
 }
